@@ -1,10 +1,8 @@
-     using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Cinemachine;
-using Unity.VisualScripting;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -31,7 +29,8 @@ public class DialogueManager : MonoBehaviour
     [Header("Animator")]
     [SerializeField] private Animator _animatorCanvas;
     
-    [Header("Hero Controller")]
+    [Header("Hero Script")]
+    [SerializeField] private HeroEntity _heroEntity;
     [SerializeField] private HeroController _heroController;
     
     [Header("Barre Psychologique")]
@@ -104,6 +103,9 @@ public class DialogueManager : MonoBehaviour
     {
         _animatorCanvas.SetBool("IsOpen", false);
         _heroController.GetComponent<HeroController>().enabled = true;
+        
+        // Check if it's the end of the dialogue with the Gymnase Man
+        _TeleportEndDialogue();
     }
     
     #endregion
@@ -115,7 +117,7 @@ public class DialogueManager : MonoBehaviour
         if (_triggerDialogue.NpcTriggered.transform.parent.name == "NPC_Guichet" && _currentIdSentences == 1)
         {
             _psychoBar.gameObject.SetActive(true);
-            _psychoBar.value = 0.9f;
+            _psychoBar.value = 0.5f;
             _cineMarchine.m_AmplitudeGain = 1.5f;
             _cineMarchine.m_FrequencyGain = 1f;
         }
@@ -124,8 +126,7 @@ public class DialogueManager : MonoBehaviour
     private void _TeleportEndDialogue()
     {
         if (_triggerDialogue.NpcTriggered.transform.parent.name != "NPC_Guichet") return;
-        
-        
+        _heroEntity.GetComponent<HeroTeleporter>()._TeleportLabyrinth();
     }
     
     #endregion
