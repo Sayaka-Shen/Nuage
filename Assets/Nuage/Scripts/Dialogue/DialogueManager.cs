@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using TMPro;
 using Cinemachine;
@@ -41,7 +42,9 @@ public class DialogueManager : MonoBehaviour
     
     [Header("Teleporter")]
     [SerializeField] private GameObject secondTeleporter;
-    
+
+    [Header("Gymnase")] 
+    [SerializeField] private GameObject _gymnase;    
 
     private void Start()
     {
@@ -106,6 +109,9 @@ public class DialogueManager : MonoBehaviour
         
         // Check if it's the end of the dialogue with the Gymnase Man
         _TeleportEndDialogue();
+        
+        // Functions to activate the tag of the Gymnase when the discussion with the mom is finished
+        _ActivateGymnaseTag();
     }
     
     #endregion
@@ -127,6 +133,13 @@ public class DialogueManager : MonoBehaviour
     {
         if (_triggerDialogue.NpcTriggered.transform.parent.name != "NPC_Guichet") return;
         _heroEntity.GetComponent<HeroTeleporter>()._TeleportLabyrinth();
+    }
+
+    private void _ActivateGymnaseTag()
+    {
+        if (_triggerDialogue.NpcTriggered.transform.parent.name != "NPC_Mom") return;
+        _gymnase.gameObject.tag = "Gymnase";
+        _gymnase.GetComponent<BoxCollider2D>().isTrigger = true;
     }
     
     #endregion
