@@ -219,7 +219,7 @@ public class DialogueManager : MonoBehaviour
                     StartCoroutine(TypeSentence(newSentenceOne));
                     _dialogueBoxButton.gameObject.SetActive(true);
 
-                    SceneManager.LoadScene(4);
+                    SceneManager.LoadScene(3);
                 }
                 
                 _buttonChoiceTwo.gameObject.SetActive(false);
@@ -231,7 +231,7 @@ public class DialogueManager : MonoBehaviour
                     StartCoroutine(TypeSentence(newSentenceTwo));
                     _dialogueBoxButton.gameObject.SetActive(true);
                     
-                    SceneManager.LoadScene(3);
+                    SceneManager.LoadScene(2);
                 }
                 
                 _buttonChoiceOne.gameObject.SetActive(false);

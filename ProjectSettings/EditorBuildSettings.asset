@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Nuage/Scenes/Niveau_1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Nuage/Scenes/Niveau_2.unity
-    guid: 65db86009e1055a40939c487a2fc0ae9
-  - enabled: 1
     path: Assets/Nuage/Scenes/Bad_End.unity
     guid: be03a27e4bd1a0b41aa6b1cf81d00c2a
   - enabled: 1
