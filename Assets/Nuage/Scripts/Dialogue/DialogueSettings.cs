@@ -9,4 +9,7 @@ public class DialogueSettings : MonoBehaviour
     
     [TextArea(3, 10)]
     public List<string> sentences;
+
+    [TextArea(3, 10)]
+    public string[] choices = new string[2];
 }
