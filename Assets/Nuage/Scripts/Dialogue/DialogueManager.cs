@@ -59,6 +59,7 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Boîte de dialogue")] 
     [SerializeField] private Button _dialogueBoxButton;
+        
 
     private void Start()
     {
@@ -127,7 +128,10 @@ public class DialogueManager : MonoBehaviour
         _heroController.GetComponent<HeroController>().enabled = true;
         
         // Check if it's the end of the dialogue with the Gymnase Man
-        _TeleportEndDialogue();
+        _TeleportEndDialogueGuichet();
+        
+        // Check if it's end of the dialogue with the mom in lvl 2 to teleport Nué in dream
+        _TeleportEndDialogueMom();
         
         // Functions to activate the tag of the Gymnase when the discussion with the mom is finished
         _ActivateGymnaseTag();
@@ -151,10 +155,18 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void _TeleportEndDialogue()
+    private void _TeleportEndDialogueGuichet()
     {
         if (_triggerDialogue.NpcTriggered.transform.parent.name != "NPC_Guichet") return;
-        _heroEntity.GetComponent<HeroTeleporter>()._TeleportLabyrinth();
+        _heroEntity.GetComponent<HeroTeleporter>().TeleportLabyrinth();
+    }
+
+    private void _TeleportEndDialogueMom()
+    {
+        if (_triggerDialogue.NpcTriggered.transform.parent.name == "NPC_Mom" && _currentScene.name == "Niveau_2")
+        {
+            _heroEntity.GetComponent<HeroTeleporter>().TeleportDream();
+        }
     }
 
     private void _ActivateGymnaseTag()
@@ -173,7 +185,7 @@ public class DialogueManager : MonoBehaviour
         {
             _animatorChoice.SetBool("IsChoiceOpen", true);
 
-            if (_animatorChoice.GetBool("IsChoiceOpen") == true)
+            if (_animatorChoice.GetBool("IsChoiceOpen"))
             {
                 _dialogueBoxButton.gameObject.SetActive(false);
             }
@@ -221,8 +233,6 @@ public class DialogueManager : MonoBehaviour
                 }
                 
                 _buttonChoiceOne.gameObject.SetActive(false);
-                break;
-            default:
                 break;
         }
     }

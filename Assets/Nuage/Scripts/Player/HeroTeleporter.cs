@@ -7,6 +7,7 @@ public class HeroTeleporter : MonoBehaviour
     [Header("Teleporter")] 
     [SerializeField] private GameObject _teleporterGymnase;
     [SerializeField] private GameObject _teleporterLabyrinth;
+    [SerializeField] private GameObject _teleporterDream;
     
     [Header("Physics")] 
     private Rigidbody2D _rigidbody;
@@ -20,7 +21,7 @@ public class HeroTeleporter : MonoBehaviour
     
     
     // Function is public to access it easily 
-    public void _TeleportLabyrinth()
+    public void TeleportLabyrinth()
     {
         transform.position = _teleporterLabyrinth.transform.position;
 
@@ -29,6 +30,11 @@ public class HeroTeleporter : MonoBehaviour
 
         _heroEntity.enabled = false;
         _heroEntityTopDown.enabled = true;
+    }
+
+    public void TeleportDream()
+    {
+        transform.position = _teleporterDream.transform.position;
     }
     
     private void OnTriggerEnter2D(Collider2D collider)

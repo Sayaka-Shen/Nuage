@@ -9,7 +9,7 @@ public class HeroEntity : MonoBehaviour
     [SerializeField] private HeroHorizontalMovementsSettings _horizontalMovementsSettings;
     private float _moveX = 0f;
     private float _horizontalSpeed = 0f;
-
+    
     private void FixedUpdate()
     {
         _UpdateHorizontalSpeed();
