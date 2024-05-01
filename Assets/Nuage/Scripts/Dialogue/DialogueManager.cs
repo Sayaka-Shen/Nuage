@@ -218,8 +218,8 @@ public class DialogueManager : MonoBehaviour
                     string newSentenceOne = _textSentence.text = "C'est bien Nué tu vas y arriver continue !!";
                     StartCoroutine(TypeSentence(newSentenceOne));
                     _dialogueBoxButton.gameObject.SetActive(true);
-                    _psychoBar.value = 0.3f;
-                    _cineMarchine.m_AmplitudeGain = 2;
+
+                    SceneManager.LoadScene(4);
                 }
                 
                 _buttonChoiceTwo.gameObject.SetActive(false);
@@ -230,6 +230,8 @@ public class DialogueManager : MonoBehaviour
                     string newSentenceTwo = _textSentence.text = "Non ne dis pas ça, tu peux le faire, ne desespère pas !";
                     StartCoroutine(TypeSentence(newSentenceTwo));
                     _dialogueBoxButton.gameObject.SetActive(true);
+                    
+                    SceneManager.LoadScene(3);
                 }
                 
                 _buttonChoiceOne.gameObject.SetActive(false);
