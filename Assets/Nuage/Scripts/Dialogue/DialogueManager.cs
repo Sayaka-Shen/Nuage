@@ -98,7 +98,7 @@ public class DialogueManager : MonoBehaviour
         _PsychoBarManagement();
         
         // Activate Dialogue with several choice for the mascotte
-        _ApplyChoice("NPC_Mascotte", "Niveau_1", 1); 
+        _ApplyChoice("NPC_Mascotte", "Niveau_1", 0); 
 
         string sentence = _sentencesManager[_currentIdSentences];
 
@@ -197,6 +197,7 @@ public class DialogueManager : MonoBehaviour
                 _textChoiceOne.text = choiceArray[0];
                 _textChoiceTwo.text = choiceArray[1];
                 
+                
                 _buttonChoiceOne.onClick.AddListener(() => _HandleChoice(1));
                 _buttonChoiceTwo.onClick.AddListener(() => _HandleChoice(2));
             }
@@ -220,14 +221,13 @@ public class DialogueManager : MonoBehaviour
                     _psychoBar.value = 0.3f;
                     _cineMarchine.m_AmplitudeGain = 2;
                 }
-
-
+                
                 _buttonChoiceTwo.gameObject.SetActive(false);
                 break;
             case 2:
                 if (_triggerDialogue.NpcTriggered.transform.parent.name == "NPC_Mascotte")
                 {
-                    string newSentenceTwo = _textSentence.text = "Allez Nué ne desespère pas !";
+                    string newSentenceTwo = _textSentence.text = "Non ne dis pas ça, tu peux le faire, ne desespère pas !";
                     StartCoroutine(TypeSentence(newSentenceTwo));
                     _dialogueBoxButton.gameObject.SetActive(true);
                 }

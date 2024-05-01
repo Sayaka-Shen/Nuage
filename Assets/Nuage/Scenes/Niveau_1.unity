@@ -1628,8 +1628,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -59, y: 68}
-  m_SizeDelta: {x: 398.854, y: 70}
+  m_AnchoredPosition: {x: -36.287, y: 51.000015}
+  m_SizeDelta: {x: 421.568, y: 117.93}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &189821547
 MonoBehaviour:
@@ -2163,9 +2163,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pnjName: "M\xE8re de Nu\xE9 "
   sentences:
-  - "Bonjour Nu\xE9, je vais te guider vers ta qu\xEAte pour faire de l'escrime."
-  - "Dirige toi d'abord vers le gymnase l\xE0 bas et parle au monsieur du guichet."
-  - "Bonne journ\xE9e dans ta qu\xEAte ma ch\xE9rie ! "
+  - "Coucou ma ch\xE9rie ! Alors c\u2019est le grand jour ? Tu es pr\xEAte ? "
+  - "Ah pardon Maman est un peu excit\xE9e \xE0 l\u2019id\xE9e de savoir que sa petite
+    fille ch\xE9rie va se lancer pour r\xE9aliser son r\xEAve."
+  - "Bon allez ne tardes pas vas au gymnase pour t\u2019inscrire !\r\n"
   choices:
   - 
   - 
@@ -4333,7 +4334,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.05651, y: -8.21951, z: -10}
+  m_LocalPosition: {x: 39.683487, y: -206.35951, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4950,7 +4951,7 @@ Transform:
   m_GameObject: {fileID: 618421359}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.39, y: -7.38, z: 0}
+  m_LocalPosition: {x: 42.35, y: -205.52, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -5097,11 +5098,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pnjName: Mascotte
   sentences:
-  - "Salut Nu\xE9, tu es arriv\xE9 jusque l\xE0, c'est super ! "
-  - "Mais c'est pas fini, veux-tu continuer \xE0 affronter tes peurs ?!"
+  - "Bah alors c\u2019est tout ? Tu es pr\xEAte \xE0 tout abandonner d\xE8s le premier
+    obstacle ?"
   choices:
-  - Je dois continuer !
-  - Cela me fait trop peur !
+  - Tu as raison je dois me battre !
+  - 'Oui il a raison je suis une incapable !
+
+'
 --- !u!1 &635783291
 GameObject:
   m_ObjectHideFlags: 0
@@ -5416,7 +5419,7 @@ Transform:
   m_GameObject: {fileID: 679731621}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.05651, y: -8.21951, z: -10}
+  m_LocalPosition: {x: 39.683487, y: -206.35951, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9353,9 +9356,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pnjName: Gars du Guichet
   sentences:
-  - "Bonjour jeune fille, vous me d\xEEtes que vous voulez faire de l'escrime !"
-  - Nous n'acceptons pas les fillettes dans ton genre !
-  - Et en plus avec ton handicap tu aurais aucune chance !
+  - "Alors petite comme \xE7a tu veux t\u2019inscrire \xE0 la comp\xE9tition d\u2019escrime
+    ? "
+  - "Mais c\u2019est ridicule jamais quelqu\u2019un comme TOI peut r\xE9ussir \xE0
+    faire quoique ce soit !"
+  - Allez rentres chez toi au lieu de gaspiller mon temps.
   choices:
   - 
   - 
@@ -9979,8 +9984,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -490.042, y: 66}
-  m_SizeDelta: {x: 378.496, y: 70}
+  m_AnchoredPosition: {x: -490.042, y: 51}
+  m_SizeDelta: {x: 388.371, y: 117.931}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1501383139
 MonoBehaviour:
